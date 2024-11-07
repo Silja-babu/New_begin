@@ -134,24 +134,25 @@ button{
   backdrop-filter: blur( 4px );
   padding: 4px;
   position: absolute;
-  top: 85px;
+  top: 70px;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
-  height: 35%;
+  height: 40%;
   overflow-y: scroll;
   scrollbar-width: none;
   
 }
-@media(max-width:630px){
+@media(max-width:860px){
  
   .circle{
     padding: 10px;
     margin: 4px;
   }
 }
-@media(max-width:630px){
+
+@media(max-width:860px){
   .colourgroup{
     position: unset;
     flex: unset;
