@@ -1,0 +1,36 @@
+[{
+    "name":"Babu",
+    "age":55,
+    "isEmployed":true
+},
+{
+    "name":"Lissy",
+    "age":52,
+    "isEmployed":true
+},{
+    "name":"Libin",
+    "age":33,
+    "isEmployed":true
+},
+{
+    "name":"Silbi",
+    "age":30,
+    "isEmployed":true
+},{
+    "name":"Rino",
+    "age":27,
+    "isEmployed":true
+},{
+    "name":"Silja",
+    "age":23,
+    "isEmployed":true
+},{
+    "name":"Bilcy",
+    "age":21,
+    "isEmployed":false
+},{
+    "name":"Anson",
+    "age":7,
+    "isEmployed":false
+}
+]
