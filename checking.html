@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show and Hide Text Example</title>
+  <style>
+    #para {
+      font-size: 20px;
+      font-weight: bold;
+      display: none; /* Initially, the text is hidden */
+    }
+  </style>
+</head>
+<body>
+  <p id="para">This text will appear and disappear based on button clicks.</p>
+  <button id="startButton">Start</button>
+  <button id="stopButton">Stop</button>
+
+  <script>
+    // Function to show the text
+    function showText() {
+      const elem = document.getElementById('para');
+      elem.style.display = 'block';  // Make the text visible
+    }
+
+    // Function to hide the text
+    function hideText() {
+      const elem = document.getElementById('para');
+      elem.style.display = 'none';  // Hide the text
+    }
+
+    // Start button click event: Shows the text
+    document.getElementById('startButton').addEventListener('click', function() {
+      showText();
+    });
+
+    // Stop button click event: Hides the text
+    document.getElementById('stopButton').addEventListener('click', function() {
+      hideText();
+    });
+    function generatePyramid(n) {
+    for (let i = 1; i <= n; i++) {
+        // Calculate spaces for the current row
+        let spaces = ' '.repeat(n - i);
+        
+        // Calculate stars for the current row
+        let stars = '*'.repeat(2 * i - 1);
+        
+        // Combine spaces and stars and print the current row
+        console.log(spaces + stars);
+    }
+}
+
+// Call the function with the desired number of rows (e.g., 5 rows)
+generatePyramid(5);
+  </script>
+</body>
+</html>
