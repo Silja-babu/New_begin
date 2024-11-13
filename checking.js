@@ -21,3 +21,6 @@ function generatePyramid(n) {
 
 // Call the function with the desired number of rows (e.g., 5 rows)
 generatePyramid(5);
+
+
+

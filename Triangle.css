@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input, .colour, .delay, .starts {
+    margin-bottom: 20px;
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+button {
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+
+.circle {
+    width: 10px;
+    height: 30px;
+    border-radius: 50%;
+    background-color:rgb(105, 105, 105);
+    border: none;
+    margin: 3px;
+    
+}
+
+
+#pyramidcontainer{
+    white-space: pre;
+    text-align: center;
+    margin: 10px;
+}

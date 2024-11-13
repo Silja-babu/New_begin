@@ -14,7 +14,7 @@
 //const parseData= JSON.parse(jsonPeople)
 //console.log(parseData)
 
-
+   
 
 //fetch("people.json")
 //.then(response=>response.json())
@@ -193,5 +193,127 @@ switch(fruit){
 }
 
 
-let myElement=document.getElementById("myVersion");
-console.log(myElement.innerText)
+
+
+
+function showPrimes(n){
+    nextPrime:
+    for(let i=2;i<n;i++){
+        for(let j=2;j<i;j++){
+            if(i%j==0)continue nextPrime
+        }
+        console.log(i)
+    }
+   }
+function showPrimes(n){
+    for(let i=2;i<n; i++){
+        if(n%i==0) return false
+    }
+    return true;
+}
+for(let i=0;i<10;i++){
+    let drop=getWhiskey();
+    smell(drop);
+    add(drop,glass);
+}
+for(let t=0;t<3;t++){
+    let tomato=getTomato();
+    examine(tomato);
+    let juice=press(tomato);
+    add(juice,glass);
+}
+addWhiskey(glass);
+addJuice(glass);
+function addWhiskey(container){
+    for(let i=0;i<10;i++){
+        let drop=getWhiskey();
+    }
+}
+function addJuice(container){
+    for(let t=0;t<3;t++){
+        let tomato=getTomato();
+    }
+}
+let user=authenticateUser();
+function render(){
+    let user=anotherValue();
+    
+}
+
+describe("pow",function(){
+    it("raises to n-th power",function(){
+        assert.equal(pow(2,3),8);
+    })
+    it("3 raised to power 4 is 81",function(){
+        assert.equal(pow(3,4),81);
+    })
+})
+function pow(x,n){
+    let result=1;
+    for(let i=0;i<n;i++){
+        result*=x;
+    }
+    return result;
+}
+
+describe("pow",function(){
+    function makeTest(x){
+        let expected=x*x*x;
+        it(`${x} in the power 3 is ${expected}`,function(){
+            assert.equal(pow(x,3),expected);
+        })
+    }
+    for(let x=1;x<=5;x++){
+        makeTest(x)
+    }
+})
+
+describe("pow",function(){
+    describe("raises x to power 3",function(){
+        let expected =x*x*x;
+        it(`${x} in the power 3 is ${expected}`,function(){
+            assert.equal(pow(x,3),expected);
+
+        })
+    })
+    for (let x=1;x<=5;x++){
+        makeTest(x)
+    }
+})
+
+
+describe("test",function(){
+    before(()=>console.log("Testing started-before all tests"))
+    after(()=>console.log("Testing finished-after all tests"))
+    beforeEach(()=>console.log("Before a test-enter a test"))
+    afterEach(()=>console.log("after a test-exit a test"))
+    it('test 1',()=>console.log(1))
+    it('test 2',()=>console.log(2))
+})
+function pow(x,n){
+    if(n<0) return NaN;
+    if(Math.round(n)!=n) return NaN;
+    let result=1;
+    for(let i=0;i<n;i++){
+        result*=x;
+    }
+    return results;
+
+}
+
+
+it("Raises x to the power n",function(){
+    let x=5;
+    let result=x;
+    assert.equal(pow(x,1),result);
+    result*=x;
+    assert.equal(pow(x,2),result);
+    result*=x;
+    assert.equal(pow(x,3),result)
+})
+
+if(!Math.trunc){
+    Math.trunc=function(number){
+        return number<0?Math.ceil(number):Math.floor(number)
+    };
+};
