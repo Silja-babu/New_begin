@@ -481,3 +481,153 @@ console.log(JSON.stringify(meetup,function replacer(key, value){
     console.log(`${key}:${value}`)
     return(key=='occupiedBy')? undefined:value;
 }))
+
+let uswer={
+    name:"John",
+    age:25,
+    roles:{
+        isAdmin:false,
+        isEditor:true
+    }
+
+}
+console.log(JSON.stringify(uswer,null,2))
+
+let roomse={
+    number:23
+};
+let meetserious={
+    title:"Conference",
+    date: new Date(Date.UTC(2017,0,1)),
+    roomse
+}
+console.log(JSON.stringify(meetserious))
+
+
+let number={
+    number:23,
+    toJSON(){
+        return this.number;
+    }
+}
+let meetserious234={
+    title:"Conference",
+    number
+
+}
+console.log(JSON.stringify(number))
+console.log(JSON.stringify(meetserious234))
+
+
+let setnum="[0,1,2,3]";
+setnum=JSON.parse(setnum)
+console.log(setnum[3]);
+
+let userdata='{"name":"John","age":35,"isAdmin":false,"friends":[0,1,2,3,4,5]}';
+let userrr=JSON.parse(userdata);
+console.log(userrr.name)
+
+let str=`{"title":"Conference","date":"2017-11-30T12:00:00.000z"}`;
+let metup=JSON.parse(str,function(key,value){
+    if(key=='date')return new Date(value);
+    return value;
+});
+console.log(metup.date.getDate());
+
+let user={
+    name:"John Smith",
+    age:35
+
+};
+let user2=JSON.parse(JSON.stringify(user))
+
+
+let person={name:'Peter'};
+let administrator=person;
+administrator.name='meter'
+console.log(person.name);
+
+
+let john={
+    name:'john',
+    age:30,
+};
+let clone={};
+for(let key in john){
+    clone[key]=john[key]
+
+}
+clone.name='pete'
+console.log(john.name)
+console.log(clone)
+          //object assign
+ let usered={name:"John"};
+ let permission1={canView:true};
+ let permission2={canEdit:true};
+ Object.assign(usered,permission1,permission2)
+ console.log(usered.name)
+ console.log(usered.canEdit)
+ console.log(usered.canView);  
+ 
+ 
+
+ let namechane={name:"Silja"};
+ Object.assign(namechane,{name:"Silja Babu"});
+ console.log(namechane.name);
+
+
+ let nextuser={
+    name:"John",
+    sizes:{
+        height:182,
+        width:50
+    }
+ }
+ nextuser.sizes.width=60;
+ console.log(nextuser.sizes.width)
+
+
+
+
+ let classical={
+    name:"kuchupidi",
+    stages:{
+        stage1:"left aud",
+        stage2:"right aud"
+    }
+ }
+ let compare=Object.assign({},classical);
+ console.log(classical.stages===compare.stages)
+ classical.stages.stage1="west aud"
+ console.log(compare.stages.stage1)
+
+
+//                let nanodinirtham={
+ //                   name:"anashora",
+ //                   other:{
+ //                       mrng:"kuchupidi",
+ //                       evng:"monoact"
+ //                   }
+ //               }
+ //               let opponants=structuredClone(nanodinirtham)
+ //               console.log(nanodinirtham.other===opponants.other)
+ //               nanodinirtham.other.evng="canceled";
+ //               console.log(opponants.other.evng)
+ //               console.log(nanodinirtham.other)
+
+
+
+//                    let suser={}
+//                    suser.me=suser
+//                    let sclone=structuredClone(suser)
+//                    console.log(sclone.me===sclone)
+
+                    
+                       //Garbage collection
+//cc/c/c/c/c/c/c/c/c/c/c/c/c/c/c//c/c/c/c/cc/c/c/
+
+
+                       //   OPTIONAL CHAINING
+  
+                       
+//javascript is invented by Brendan Eich
