@@ -313,12 +313,79 @@ console.log(value)
 function unique(arr){
     return Array.from(new Set(arr))
 }
-let values=['Hare','krishna','Hare','krishna','krishna','krishna','krishna','Hare',":-0"]
-console.log(unique(values))
-console.log("i can't ")
-console.log("i will")
-console.log("you will if i do")
+let johns={name:"JOhn"};
+let visitCountmap=new Map();
+visitCountmap.set(john,123);
+console.log(visitCountmap.get(john))
 
-console.log("it's me mrs.thaburan")
-console.log("everyone can")
-console.log("sorted by we will do then yo will achieve the best moment in the life")
+
+let recipe= new Map([
+    ['Chicken',250],
+    ['chilly',4],
+    ['tomato',1],
+    ['curd',2],
+    ['gingergarlic paste',2],
+    ['Rice',2],
+    ['nuts',5],
+    ['water',2]
+])
+for (let items of recipe.keys()){
+    console.log(`The required items for the biriyani are ${items}`)
+}
+for(let amount of recipe.values()){
+    console.log(`Required amount of items ${amount}`)
+}
+for (let total of recipe){
+    console.log(`Total amount of required item ${total}`)
+}
+
+
+let recipe2= new Map([
+    ['chicken','2kg'],
+    ['chilly',4 ],
+    ['tomato','1 big'],
+    ['curd','2 cups'],
+    ['gingergarlic paste','2 spoons'],
+    ['Rice','2 person'],
+    ['nuts','5 pinch'],
+    ['water','2 cups']
+])
+console.log(recipe2.get('chicken'))
+for (let vegetable of recipe2.keys()){
+    console.log(`required things ${vegetable}`)
+}
+for (let total of recipe2.values()){
+    console.log(`total wanted item for buying ${total} `)
+}
+
+let  obj3={
+     name:"Johnsee",
+     age:30   
+}
+let map1 = new Map(Object.entries(obj3))
+console.log(map1.get('name'));
+
+
+let permission = Object.fromEntries([
+    ['banana',2],
+    ['Orange',5],
+    ['Meat',4]
+])
+console.log(permission.Orange)
+
+
+let set1= new Set();
+let johni={name:"JOhn"};
+let Petee={name:"Pete"};
+let maryy={name:"Mary"};
+
+set .add(johni);
+set.add(Petee);
+
+
+
+let set3 =new Set(["oranges","apples","banana","pineapple"])
+for(let value of set) console.log(value)
+set3.forEach((value,valueAgain,set3) =>{
+    console.log(value)
+})
