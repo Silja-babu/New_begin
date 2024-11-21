@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #train {
+          position: relative;
+          cursor: pointer;
+        }
+      </style>
+</head>
+<body>
+    <img id="train" src="https://js.cx/clipart/train.gif">
+    <script>
+       train.onclick = function() {
+      let start = Date.now();
+
+      let timer = setInterval(function() {
+        let timePassed = Date.now() - start;
+
+        train.style.left = timePassed / 1 + 'px';
+
+        if (timePassed > 1800) clearInterval(timer);
+
+      }, 2);
+    }
+    </script>
+</body>
+</html>

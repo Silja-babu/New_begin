@@ -75,4 +75,4 @@
        var b=2
        console.log(b);
        a();         //scope which means that where the access of the number can done....
-       
+          

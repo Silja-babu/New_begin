@@ -76,3 +76,35 @@ console.log(Jan02_1970)
          console.log('Time of diffSubstract:' + bench(diffSubstract) +'ms')
          console.log('TIme of diffGetTIme: '+bench(diffGetTIme)+ 'ms')
          
+let ms= Date.parse('2012-01-26T13:51:50.417-07:00');
+console.log(ms);
+
+function getWeekDay(){
+   
+}
+
+
+
+function diffSub(date1,date2){
+      return date2 - date1;
+}
+function diffGetTime(date1,date2){
+   return date2.getTime() - date1.getTime();
+}
+function bench(f){
+   let date1 = new Date(0);
+   let date2 = new Date();
+    
+   let start = Date.now();
+   for(let i=0;i<100000; i++) f(date1, date2);
+   return Date.now() - start;
+}
+ let time1 =0;
+ let time2 = 0;
+
+ for(let i=0; i<10; i++){
+   time1+=bench(diffSub);
+   time2+=bench(diffGetTime)
+ }
+
+ 

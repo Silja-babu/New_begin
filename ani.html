@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falling Text Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .falling-text {
+            position: absolute;
+            color: #0f0; /* Green text color */
+            font-family: monospace;
+            font-size: 30px;
+            white-space: nowrap;
+            animation: fall 1s infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -50px;
+                opacity: 1;
+            }
+            100% {
+                top: 10vh;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?';
+        const numOfFallingText = 50; 
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        // Function to generate a random text string
+        function getRandomText() {
+            return chars.charAt(getRandomInt(0, chars.length - 1));
+        }
+
+        // Function to create falling text effect
+        function createFallingText() {
+            const textElement = document.createElement('div');
+            textElement.classList.add('falling-text');
+            textElement.style.left = `${getRandomInt(0, window.innerWidth)}px`;
+            textElement.style.animationDuration = `${getRandomInt(3, 6)}s`;
+            textElement.textContent = getRandomText();
+            document.body.appendChild(textElement);
+
+            // Repeat the random text creation every 100ms
+            setInterval(() => {
+                textElement.textContent = getRandomText();
+            }, 100);
+        }
+
+        // Create multiple falling text elements
+        for (let i = 0; i < numOfFallingText; i++) {
+            createFallingText();
+        }
+    </script>
+</body>
+</html>
