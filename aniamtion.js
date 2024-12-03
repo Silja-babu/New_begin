@@ -11,4 +11,4 @@
                 train.style.left = timePassed/5+'px'
             }  */                
 
-                
+              

@@ -1,0 +1,19 @@
+#bagua-table th{
+    text-align: center;
+    font-weight: bold;
+}
+#bagua-table td{
+    width: 150px;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: bottom;
+    padding-top: 5px;
+    padding-bottom: 12px;
+}  
+#bagua-table .nw{
+    background: #999;
+}
+#bagua-table .n{
+    background-color: blue;
+    color: white;
+}

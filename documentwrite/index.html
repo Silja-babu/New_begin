@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.body.style.margin = 20;
+        alert(document.body.style.margin);
+
+        document.body.style.margin = '20px';
+        alert(document.body.style.margin)
+
+        alert(document.body.style.marginTop);
+        alert(document.body.style.marginLeft);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div id="div">Button</div>
+        <script>
+            div.style.cssText = `
+                color: red ! important;
+                background-color : yellow;
+                width: 100px;
+                padding:10px;
+                text-align: center;
+            `;
+            console.log(div.style.cssText)
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p>After one second the contents of this page will be replaced...</p>
+        <script>
+            setTimeout(() => document.write('<b>...By this.</b>'),1000)
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <p>Somewhere in the page.....</p>
+        <script>
+            document.write('<b>Hello from JS </b>')
+        </script>
+        <p>The end</p>
+    </body>
+</html>

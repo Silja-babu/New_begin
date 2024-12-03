@@ -43,13 +43,28 @@ startButton.addEventListener('click',startBlinking)
 stopButton.addEventListener('click',stopBlinking)
 
 
+// vtlil pani
 
+let numbers = [0,1,2]
+numbers = new Proxy (numbers, {
+    get(target, prop){
+        if(prop in target){
+            return target[prop];
+        }else {
+            return 0;
+        }
+    }
+})
 
+alert(numbers[1])
+alert(numbers[123])
 
-
-
-
-
+let dictionary ={
+    'Hello':'Holo',
+    'Bye':'Adios',
+}
+alert(dictionary['hello']);
+alert(dictionary['welcome'])
 
 
 

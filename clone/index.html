@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .alert{
+                padding: 15px;
+                border: 1px solid #d6e9c6;
+                border-radius: 4px;
+                color: #3c763d;
+                background-color: #dff0d8;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="alert" id="div">
+            <strong>Hi there!</strong>You've read an important message.
+        </div>
+        <script>
+            let div2 =div.cloneNode(true)
+            div2.querySelector('strong').innerHTML = 'Bye there!'
+            div.after(div2)
+        </script>
+    </body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul"></ul>
+    <script>
+        function getListContent(){
+            let result =[]
+
+            for(let i=1; i<=10; i++){
+                let li = document.createElement('li');
+                li.append(i)
+                result.push(li)
+            }
+            return result;
+        }
+        ul.append(...getListContent())
+
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="list">
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+      </ol>
+      
+      <script>
+        let newLi = document.createElement('li');
+        newLi.innerHTML = 'Hello, world!';
+      
+        list.appendChild(newLi);
+      </script>
+</body>
+</html>
